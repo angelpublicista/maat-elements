@@ -107,3 +107,36 @@
 #gris:hover{
     transform: scale(1.1) translateX(-4%) translateY(-3%);
 }
+
+@media (max-width: 769px){
+    .mt-info-wrap{
+        margin-top: -100px;
+    }
+    .mt-info-wrap__cap__title{
+        margin-top: -3em;
+        font-size: 35px;
+    }
+    .mt-info-wrap__cap__desc{
+        padding: 0em 2em;
+    }
+    .mt-info-wrap__cap__link{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px){
+    .mt-logo-wrap svg{
+        width: 415px;
+    }
+    .mt-info-wrap__bg{
+        height: 470px;
+        object-fit: cover;
+    }
+    .mt-info-wrap{
+        margin-top: -185px;
+    }
+    .mt-info-wrap__cap__desc{
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
