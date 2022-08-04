@@ -53,12 +53,57 @@
     justify-content: center;
     height: 100%;
     color: white;
+    align-items: center;
 }
 
 .mt-info-wrap__bg{
     width: 100%;
 }
 
+.mt-info-wrap__cap__title{
+    color: white;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 40px;
+    margin-top: 2em;
+}
+
+.mt-info-wrap__cap__desc{
+    color: white;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    margin-top: 1em;
+}
+
+.mt-info-wrap__cap__link{
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 1em;
+    margin-top: 2em;
+    font-family: 'Nexa Bold', sans-serif;
+    font-size: 15px;
+    letter-spacing: 5px;
+    transition: .4s;
+}
+
+.mt-info-wrap__cap__link:hover{
+    background-color: #1B1B1B;
+    border-color: #1B1B1B;
+}
+
 #verde:hover{
+    transform: scale(1.1) translateX(-4%) translateY(-3%);
+}
+
+#rojo:hover{
+    transform: scale(1.1) translateX(-4%) translateY(-3%);
+}
+
+#azul:hover{
+    transform: scale(1.1) translateX(-4%) translateY(-3%);
+}
+
+#gris:hover{
     transform: scale(1.1) translateX(-4%) translateY(-3%);
 }
