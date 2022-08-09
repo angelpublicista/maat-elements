@@ -15,18 +15,52 @@ if(logoMaat){
             const idItem = this.getAttribute('id')
             const info = JSON.parse(this.dataset.info)
 
-            console.log(info.title)
+            logoMaat.querySelectorAll('text').forEach(function(el){
+                el.style.visibility = "visible  "
+            })
+            this.querySelector('text').style.visibility = "hidden"
 
             boxInfo.querySelector('.mt-info-wrap__cap__title').innerText = info.title
             boxInfo.querySelector('.mt-info-wrap__bg').setAttribute('src', info.image)
             boxInfo.querySelector('.mt-info-wrap__cap__link').setAttribute('href', info.buttonLink)
             boxInfo.querySelector('.mt-info-wrap__cap__link').innerText = info.buttonText
 
-            if(idItem == "gris") rotateImage(logoMaat, '95')
-            if(idItem == "verde") rotateImage(logoMaat, '175')
-            if(idItem == "azul") rotateImage(logoMaat, '270')
-            if(idItem == "rojo") rotateImage(logoMaat, '0')
+            // Rotación Gris
+            if(idItem == "gris"){
+                rotateImage(logoMaat, '95')
+            }
             
+            // Rotación verde
+            if(idItem == "verde"){
+                rotateImage(logoMaat, '175')
+
+                /* ==== 
+                ROTACION PETALOS 
+                ===*/
+
+                // Petalo gris
+                document.querySelector('svg .mt-petalo#gris text').setAttribute('transform', 'rotate(185, 550, 170)')
+
+                // Petalo azul
+                document.querySelector('svg .mt-petalo#azul text').setAttribute('transform', 'rotate(185, -10, 260)')
+
+                // Petalo azul
+                document.querySelector('svg .mt-petalo#rojo text').setAttribute('transform', 'rotate(185, 270, 350)')
+                
+            }
+
+            // Rotación Azul
+            if(idItem == "azul"){
+                rotateImage(logoMaat, '270')
+            }
+
+            // Rotación rojo
+            if(idItem == "rojo"){
+                rotateImage(logoMaat, '0')
+                logoMaat.querySelectorAll('text').forEach(function(el){
+                    el.removeAttribute('transform')
+                })
+            }  
             })
         })
         

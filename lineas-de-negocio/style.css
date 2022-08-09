@@ -13,10 +13,42 @@ html {
     position: relative;
     z-index: 1;
 }
+
 .mt-logo-wrap svg{
     width: 450px;
     transition: .6s;
-    /* transform: rotate(175deg); */
+    overflow: visible;
+}
+
+.mt-petalo__text{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 25px;
+    /* opacity: 0; */
+    transition: .5s;
+}
+
+.mt-petalo:hover .mt-petalo__text{
+    opacity: 1;
+}
+
+.mt-petalo#verde .mt-petalo__text{
+    fill: #688052;   
+}
+
+.mt-petalo#rojo text{
+    visibility: hidden;
+}
+
+.mt-petalo#gris .mt-petalo__text{
+    fill: #6C6C6C;   
+}
+
+.mt-petalo#azul .mt-petalo__text{
+    fill: #4F80A4;   
+}
+
+.mt-petalo#rojo .mt-petalo__text{
+    fill: #A64935;   
 }
 
 .mt-logo-wrap svg g{
@@ -82,19 +114,7 @@ html {
     border-color: #1B1B1B;
 }
 
-#verde:hover{
-    transform: scale(1.1) translateX(-4%) translateY(-3%);
-}
-
-#rojo:hover{
-    transform: scale(1.1) translateX(-4%) translateY(-3%);
-}
-
-#azul:hover{
-    transform: scale(1.1) translateX(-4%) translateY(-3%);
-}
-
-#gris:hover{
+.mt-petalo:hover, .mt-petalo.active{
     transform: scale(1.1) translateX(-4%) translateY(-3%);
 }
 
