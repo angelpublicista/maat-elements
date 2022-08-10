@@ -29,6 +29,20 @@ if(logoMaat){
             if(idItem == "gris"){
                 rotateImage(logoMaat, '95')
             }
+
+            /* ==== 
+                ROTACION PETALOS 
+                ===*/
+
+                // Petalo azul
+                document.querySelector('svg .mt-petalo#azul text').setAttribute('transform', 'rotate(-94, 150, 270)')
+
+                // Petalo rojo
+                document.querySelector('svg .mt-petalo#rojo text').setAttribute('transform', 'rotate(-94, 230, 320)')
+
+                // Petalo verde
+                document.querySelector('svg .mt-petalo#verde text').setAttribute('transform', 'rotate(-94, 30, -30)')
+
             
             // Rotación verde
             if(idItem == "verde"){
@@ -44,7 +58,7 @@ if(logoMaat){
                 // Petalo azul
                 document.querySelector('svg .mt-petalo#azul text').setAttribute('transform', 'rotate(185, -10, 260)')
 
-                // Petalo azul
+                // Petalo rojo
                 document.querySelector('svg .mt-petalo#rojo text').setAttribute('transform', 'rotate(185, 270, 350)')
                 
             }
@@ -52,7 +66,22 @@ if(logoMaat){
             // Rotación Azul
             if(idItem == "azul"){
                 rotateImage(logoMaat, '270')
+
+                /* ==== 
+                ROTACION PETALOS 
+                ===*/
+
+                // Petalo gris
+                document.querySelector('svg .mt-petalo#gris text').setAttribute('transform', 'rotate(90, 530, 10)')
+
+                // Petalo verde
+                document.querySelector('svg .mt-petalo#verde text').setAttribute('transform', 'rotate(90, 210, 140)')
+
+                // Petalo rojo
+                document.querySelector('svg .mt-petalo#rojo text').setAttribute('transform', 'rotate(90, 70, 560)')
             }
+
+
 
             // Rotación rojo
             if(idItem == "rojo"){
