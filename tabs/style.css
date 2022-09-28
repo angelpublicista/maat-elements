@@ -5,16 +5,26 @@
     font-family: 'Nexa Regular', sans-serif;
     font-size: 20px;
     display: flex;
+    justify-content: center; /*Editar el color según corresponda*/
     flex-flow: row wrap;
+    background-color: green; /*Editar el color según corresponda*/
+    padding: 1em 0;
 }
 
 .mt-tabs__list__item{
-    padding: 1em;
+    padding: 0 1em;
+    padding-bottom: 1em;
     cursor: pointer;
     color: #8C8C8C;
     transition: .3s;
     position: relative;
-    margin: 0 5px;
+    margin: 0 10px;
+    color: white; /*Editar el color según corresponda*/
+}
+
+.mt-tabs__list__item__icon{
+    text-align: center;
+    font-size: 46px;
 }
 
 .mt-tabs__list__item::before{
@@ -23,14 +33,14 @@
     left: 50%;
     bottom: 0;
     height: 1px;
-    background-color: black;
+    background-color: white; /*Editar el color según corresponda*/
     transition: .3s;
     width: 0;
     
 }
 
 .mt-tabs__list__item:hover, .mt-tabs__list__item.active{
-    color: black;
+    color: white; /*Editar el color según corresponda*/
 }
 
 .mt-tabs__list__item:hover::before, .mt-tabs__list__item.active::before{
@@ -39,7 +49,6 @@
 }
 
 .mt-tabs__content{
-    background-color: #ccc;
     margin: 2em 0;
 }
 
@@ -47,6 +56,19 @@
     display: none;
 }
 
+
 .mt-tabs__content__item.active{
     display: block;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
 }
