@@ -9,10 +9,12 @@
     flex-flow: row wrap;
     background-color: green; /*Editar el color según corresponda*/
     padding: 1em 0;
+    box-sizing: border-box;
 }
 
 .mt-tabs__list__item{
     padding: 0 1em;
+    box-sizing: border-box;
     padding-bottom: 1em;
     cursor: pointer;
     color: #8C8C8C;
@@ -71,4 +73,17 @@
         opacity: 1;
     }
     
+}
+
+@media (max-width: 480px){
+    .mt-tabs__list{
+        justify-content: flex-start;
+        overflow-x: scroll;
+        flex-flow: row nowrap;
+        font-size: 16px;
+    }
+
+    .mt-tabs__list__item__icon{
+        font-size: 40px;
+    }
 }
