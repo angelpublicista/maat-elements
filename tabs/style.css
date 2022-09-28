@@ -1,0 +1,52 @@
+.mt-tabs__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.mt-tabs__list__item{
+    padding: 1em;
+    cursor: pointer;
+    color: #8C8C8C;
+    transition: .3s;
+    position: relative;
+    margin: 0 5px;
+}
+
+.mt-tabs__list__item::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 1px;
+    background-color: black;
+    transition: .3s;
+    width: 0;
+    
+}
+
+.mt-tabs__list__item:hover, .mt-tabs__list__item.active{
+    color: black;
+}
+
+.mt-tabs__list__item:hover::before, .mt-tabs__list__item.active::before{
+    width: 100%;
+    left: 0;
+}
+
+.mt-tabs__content{
+    background-color: #ccc;
+    margin: 2em 0;
+}
+
+.mt-tabs__content__item{
+    display: none;
+}
+
+.mt-tabs__content__item.active{
+    display: block;
+}
