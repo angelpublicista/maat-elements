@@ -1,0 +1,131 @@
+.maat-search-window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: rgba(277, 277, 277, .97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: 1.5s;
+    font-family: 'Nexa Regular', sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.maat-search-window__btn-close{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+}
+
+.maat-search-window__btn-close span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    transition: .4s;
+}
+
+.maat-search-window__btn-close span:first-child{
+    transform: rotate(-45deg);
+    
+}
+
+.maat-search-window__btn-close span:last-child{
+    transform: rotate(45deg);
+    top: -2px;
+}
+
+.maat-search-window__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maat-search-window__form input, .maat-search-window__form button{
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: none;
+}
+
+.maat-search-window__form button{
+    text-align: center;
+    background-color: black;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: 'Nexa Regular', sans-serif;
+}
+
+.maat-search-window__form button span{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.maat-search-window__form input{
+    border-bottom: 1px solid black;
+    margin-right: 10px;
+    font-size: 25px;
+    padding: 10px;
+    background-color: transparent;
+    font-family: 'Nexa Regular', sans-serif;
+}
+
+.maat-search-window__form button:hover{
+    opacity: .8;
+}
+
+.maat-search-window__form input:focus{
+    outline: 0px;
+}
+
+.maat-search-window__btn-close:hover span{
+    transform: rotate(0);
+}
+
+.maat-search-window.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 480px){
+    .maat-search-window__btn-close{
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .maat-search-window__form{
+        flex-direction: column;
+    }
+
+    .maat-search-window__form input{
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .maat-search-window__form button{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
